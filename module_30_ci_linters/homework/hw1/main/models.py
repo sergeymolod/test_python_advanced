@@ -1,8 +1,8 @@
 import datetime
 from typing import Any, Dict, List
-from sqlalchemy import String, ForeignKey, UniqueConstraint
-from sqlalchemy.orm import Mapped, mapped_column, relationship, declarative_base
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import ForeignKey, String, UniqueConstraint
+from sqlalchemy.orm import (Mapped, declarative_base, mapped_column, relationship)
 
 
 class Base(declarative_base):
