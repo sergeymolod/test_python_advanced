@@ -1,7 +1,7 @@
 import factory
 from faker import Faker
 import factory.fuzzy as fuzzy
-from main.models import Client, Parking, ClientParking, db
+from main.models import Client, Parking, db
 fake = Faker('ru_RU')
 
 class ClientFactory(factory.alchemy.SQLAlchemyModelFactory):
