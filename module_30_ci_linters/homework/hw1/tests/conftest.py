@@ -15,6 +15,7 @@ def app():
     app = create_app(test_config=True)
     app.config['TESTING'] = True
     with app.app_context():
+        
         _db.create_all()
         client = Client(name="Any_name", surname="Any_Surname", credit_card="12345", car_number="28-70_OGO")
         client_2 = Client(name="Иван", surname="Иванов", credit_card="100500", car_number="12345")
