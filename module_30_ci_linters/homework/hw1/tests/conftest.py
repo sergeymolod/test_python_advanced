@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 from main.app import create_app
 from main.models import db as _db, Client, Parking, ClientParking
 
-
 def pytest_configure(config):
     config.addinivalue_line(
         "markers", "parking: маркер для тестов: «Заезд на парковку» и «Выезд с парковки»"
