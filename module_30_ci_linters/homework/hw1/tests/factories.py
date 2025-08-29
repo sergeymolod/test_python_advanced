@@ -2,9 +2,6 @@ import factory
 import factory.fuzzy as fuzzy
 from faker import Faker
 from .factories import ClientFactory, ParkingFactory
-import pytest
-from main.models import Client, ClientParking, Parking
-from main.models import db as _db
 
 
 fake = Faker('ru_RU')
