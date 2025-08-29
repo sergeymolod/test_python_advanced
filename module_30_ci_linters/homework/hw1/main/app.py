@@ -3,7 +3,7 @@ import datetime
 import sqlalchemy
 from flask import Flask, request
 from sqlalchemy import select, insert, update, and_
-#from faker import Faker
+# from faker import Faker
 
 
 def create_app(test_config=None):
