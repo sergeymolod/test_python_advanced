@@ -15,7 +15,6 @@ class ClientFactory(factory.alchemy.SQLAlchemyModelFactory):
     credit_card = fuzzy.FuzzyChoice(choices=[fake.credit_card_number(), None])
     car_number = fake.license_plate()
     
-
 class ParkingFactory(factory.alchemy.SQLAlchemyModelFactory):
     class Meta:
         model = Parking
@@ -25,4 +24,3 @@ class ParkingFactory(factory.alchemy.SQLAlchemyModelFactory):
     opened = fuzzy.FuzzyChoice(choices=[True, False])
     count_places = fake.random_int(10, 50)
     count_available_places = factory.LazyAttribute(lambda obj: obj.count_places)
-
