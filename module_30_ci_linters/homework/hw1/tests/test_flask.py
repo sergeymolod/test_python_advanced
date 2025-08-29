@@ -1,6 +1,6 @@
 #from datetime import datetime, timedelta
 import pytest
-from main.models import Client, Parking, ClientParking
+from main.models import Client, Parking
 
 
 @pytest.mark.parametrize("route", ['/clients', '/clients/1'])
