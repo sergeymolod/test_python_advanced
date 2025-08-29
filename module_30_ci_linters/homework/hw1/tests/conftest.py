@@ -15,7 +15,6 @@ def app():
     app = create_app(test_config=True)
     app.config['TESTING'] = True
     with app.app_context():
-
         _db.create_all()
         client = Client(name="Any_name", surname="Any_Surname", credit_card="12345", car_number="28-70_OGO")
         client_2 = Client(name="Иван", surname="Иванов", credit_card="100500", car_number="12345")
@@ -26,6 +25,7 @@ def app():
         client_parking = ClientParking(
             client_id=1, parking_id=1, time_in=time_in, time_out=(time_in + timedelta(hours=8))
         )
+        
         _db.session.add_all([client, client_2, parking, client_parking])
         _db.session.commit()
         yield app
@@ -47,6 +47,3 @@ def runner(app):
 def db(app):
     with app.app_context():
         yield _db
-
-
-
