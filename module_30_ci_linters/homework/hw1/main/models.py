@@ -6,7 +6,6 @@ from sqlalchemy.orm import (Mapped, declarative_base, mapped_column,
                              relationship)
 
 
-
 class Base(declarative_base):
     pass
 
