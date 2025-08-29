@@ -3,10 +3,10 @@ name: Lint and Type Check
 on:
   push:
     branches:
-      - 'https://github.com/sergeymolod/test_python_advanced'
+      - 'https://github.com/sergeymolod/test_python_advanced/tree/sergeymolod-patch-1'
   pull_request:
     branches:
-      - 'https://github.com/sergeymolod/test_python_advanced'
+      - 'https://github.com/sergeymolod/test_python_advanced/tree/sergeymolod-patch-1'
 
 jobs:
   lint:
