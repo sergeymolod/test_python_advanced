@@ -25,7 +25,6 @@ def app():
         client_parking = ClientParking(
             client_id=1, parking_id=1, time_in=time_in, time_out=(time_in + timedelta(hours=8))
         )
-        
         _db.session.add_all([client, client_2, parking, client_parking])
         _db.session.commit()
         yield app
