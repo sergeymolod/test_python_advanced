@@ -11,7 +11,7 @@ def create_app(test_config=None):
         db_name = 'sqlite:///test.db'
     app = Flask(__name__)
     app.config["SQLALCHEMY_DATABASE_URI"] = db_name
-    from .models import db, Client, Parking, ClientParking
+    from .models import Client, ClientParking, Parking, db
     db.init_app(app)
 
     @app.before_request
