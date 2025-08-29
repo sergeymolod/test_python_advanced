@@ -14,7 +14,8 @@ class ClientFactory(factory.alchemy.SQLAlchemyModelFactory):
     surname = fake.last_name()
     credit_card = fuzzy.FuzzyChoice(choices=[fake.credit_card_number(), None])
     car_number = fake.license_plate()
-    
+
+
 class ParkingFactory(factory.alchemy.SQLAlchemyModelFactory):
     class Meta:
         model = Parking
