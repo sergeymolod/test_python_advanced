@@ -11,7 +11,7 @@ build-app:
   stage: build
   image: python:3.12
   script:
-    - pip install -r requirements_tests.txt
+    - pip install -r requirements_dev.txt
   services:
     - postgres:latest
   variables:
