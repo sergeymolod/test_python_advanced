@@ -4,6 +4,7 @@ from sqlalchemy import String, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship, declarative_base
 from flask_sqlalchemy import SQLAlchemy
 
+
 class Base(declarative_base):
     pass
 
