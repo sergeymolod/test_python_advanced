@@ -3,6 +3,8 @@ import sqlalchemy
 from flask import Flask, request
 from sqlalchemy import select, insert, update, and_
 
+
+
 def create_app(test_config=None):
     if test_config is None:
         db_name = 'sqlite:///parking.db'
