@@ -5,6 +5,7 @@ from main.models import Client, Parking, db
 
 fake = Faker('ru_RU')
 
+
 class ClientFactory(factory.alchemy.SQLAlchemyModelFactory):
     class Meta:
         model = Client
