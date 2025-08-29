@@ -1,6 +1,8 @@
 from .factories import ClientFactory, ParkingFactory
 from main.models import Client, Parking
 
+
+
 def test_create_client(client, db):
     before = len(db.session.query(Client).all())
     cl = ClientFactory()
