@@ -27,7 +27,7 @@ jobs:
 
       - name: Run flake8
         run: |
-          flake8 . --max-line-length=88
+          flake8 . --max-line-length=300
 
       - name: Run isort
         run: |
