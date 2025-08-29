@@ -3,10 +3,10 @@ name: Lint and Type Check
 on:
   push:
     branches:
-      - '**'
+      - 'https://github.com/sergeymolod/test_python_advanced/tree/sergeymolod-homework_module_30_ci_linters'
   pull_request:
     branches:
-      - '**'
+      - 'https://github.com/sergeymolod/test_python_advanced/tree/sergeymolod-homework_module_30_ci_linters'
 
 jobs:
   lint:
