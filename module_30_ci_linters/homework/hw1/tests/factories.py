@@ -4,6 +4,7 @@ import factory.fuzzy as fuzzy
 from main.models import Client, Parking, db
 fake = Faker('ru_RU')
 
+
 class ClientFactory(factory.alchemy.SQLAlchemyModelFactory):
     class Meta:
         model = Client
@@ -13,6 +14,7 @@ class ClientFactory(factory.alchemy.SQLAlchemyModelFactory):
     surname = fake.last_name()
     credit_card = fuzzy.FuzzyChoice(choices=[fake.credit_card_number(), None])
     car_number = fake.license_plate()
+    
 
 class ParkingFactory(factory.alchemy.SQLAlchemyModelFactory):
     class Meta:
