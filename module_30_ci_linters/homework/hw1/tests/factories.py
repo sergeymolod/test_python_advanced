@@ -3,6 +3,7 @@ from faker import Faker
 import factory.fuzzy as fuzzy
 from main.models import Client, Parking, db
 
+
 fake = Faker('ru_RU')
 
 
