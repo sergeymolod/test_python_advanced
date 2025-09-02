@@ -16,8 +16,9 @@ db = SQLAlchemy(
 )
 
 
-class Client(db.Model):
-    # type: ignore[name-defined]
+Model = db.Model
+
+class Client(Model):
     __tablename__ = 'client'
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -37,8 +38,7 @@ class Client(db.Model):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 
-class Parking(db.Model):
-    # type: ignore[name-defined]
+class Parking(Model):
     __tablename__ = 'parking'
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -59,8 +59,7 @@ class Parking(db.Model):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 
-class ClientParking(db.Model):
-    # type: ignore[name-defined]
+class ClientParking(Model):
     __tablename__ = "client_parking"
 
     id: Mapped[int] = mapped_column(primary_key=True)
