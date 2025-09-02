@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey, String, UniqueConstraint
-from sqlalchemy.orm import (Mapped, declarative_base, mapped_column,
+from sqlalchemy.orm import (Mapped, mapped_column,
                             relationship)
 
 
