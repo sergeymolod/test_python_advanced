@@ -7,13 +7,10 @@ from sqlalchemy.orm import (Mapped, declarative_base, mapped_column,
                             relationship)
 
 
-class Base(declarative_base):
-    pass
+Base = declarative_base()
 
 
-db = SQLAlchemy(
-    model_class=Base,
-)
+db = SQLAlchemy(model_class=Base)
 
 
 class Client(db.Model):
