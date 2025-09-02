@@ -11,7 +11,7 @@ class Base(declarative_base):
     pass
 
 
-db.Model = SQLAlchemy(
+db = SQLAlchemy(
     model_class=Base,
 )
 
