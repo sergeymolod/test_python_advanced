@@ -16,7 +16,7 @@ db = SQLAlchemy(
 )
 
 
-class Client(db.Model):
+class Client(db):
     __tablename__ = 'client'
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -36,7 +36,7 @@ class Client(db.Model):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 
-class Parking(db.Model):
+class Parking(db):
     __tablename__ = 'parking'
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -57,7 +57,7 @@ class Parking(db.Model):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 
-class ClientParking(db.Model):
+class ClientParking(db):
     __tablename__ = "client_parking"
 
     id: Mapped[int] = mapped_column(primary_key=True)
