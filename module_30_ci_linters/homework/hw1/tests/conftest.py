@@ -1,7 +1,5 @@
 from datetime import datetime, timedelta
-
 import pytest
-
 from main.app import create_app
 from main.models import Client, ClientParking, Parking
 from main.models import db as _db
