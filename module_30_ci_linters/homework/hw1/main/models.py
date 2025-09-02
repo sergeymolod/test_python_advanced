@@ -3,12 +3,17 @@ from typing import Any, Dict, List
 
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey, String, UniqueConstraint
-from sqlalchemy.ext.declarative import DeclarativeMeta
 from sqlalchemy.orm import (Mapped, declarative_base, mapped_column,
                             relationship)
 
 
-BaseModel: DeclarativeMeta = db.Model
+class Base(declarative_base):
+    pass
+
+
+db = SQLAlchemy(
+    model_class=Base,
+)
 
 
 class Client(db.Model):
