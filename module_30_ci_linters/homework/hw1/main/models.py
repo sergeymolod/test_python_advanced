@@ -18,6 +18,7 @@ db = SQLAlchemy(
 
 Model = db.Model
 
+
 class Client(Model):
     __tablename__ = 'client'
 
