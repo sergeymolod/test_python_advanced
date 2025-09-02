@@ -33,9 +33,9 @@ jobs:
         run: |
           isort . --check --diff
 
-      - name: Run black --check
+      - name: Run black --diff
         run: |
-          black --check .
+          black --diff .
 
       - name: Run mypy
         run: |
