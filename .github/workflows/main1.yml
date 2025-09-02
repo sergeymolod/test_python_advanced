@@ -39,4 +39,4 @@ jobs:
 
       - name: Run mypy
         run: |
-          mypy . --ignore-imports
+          mypy . --ignore-missing-imports
