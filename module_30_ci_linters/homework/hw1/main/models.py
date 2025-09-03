@@ -11,9 +11,7 @@ class Base(declarative_base):
     pass
 
 
-db = SQLAlchemy(
-    model_class=Base,
-)
+db: SQLAlchemy = SQLAlchemy(model_class=Base)
 
 
 class Client(db.Model):
